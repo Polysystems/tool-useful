@@ -1,0 +1,42 @@
+[package]
+name = "tool-useful"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "A powerful, type-safe function calling and tool orchestration framework for Rust AI applications"
+keywords = ["llm", "ai", "agents", "tools", "function-calling"]
+categories = ["development-tools", "asynchronous"]
+
+[dependencies]
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+async-trait = "0.1"
+futures = "0.3"
+pin-project-lite = "0.2"
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Error handling
+thiserror = "2"
+
+# Sync primitives
+dashmap = "6"
+parking_lot = "0.12"
+
+# Performance
+bytes = "1"
+
+# Metrics (optional)
+metrics = { version = "0.23", optional = true }
+
+# Tracing
+tracing = "0.1"
+
+[features]
+default = ["metrics-support"]
+metrics-support = ["metrics"]
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
