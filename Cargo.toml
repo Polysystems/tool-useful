@@ -2,7 +2,7 @@
 name = "tool-useful"
 version = "0.1.0"
 edition = "2021"
-license = "MIT OR Apache-2.0"
+license = "MIT"
 description = "A powerful, type-safe function calling and tool orchestration framework for Rust AI applications"
 keywords = ["llm", "ai", "agents", "tools", "function-calling"]
 categories = ["development-tools", "asynchronous"]
